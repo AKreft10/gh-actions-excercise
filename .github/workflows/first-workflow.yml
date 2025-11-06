@@ -1,0 +1,14 @@
+name: First workflow excercise 
+on: push
+jobs: 
+  lint-test-build:
+    runs-on: ubuntu-latest  
+    steps: 
+      - name: Get code
+        uses: actions/checkout@v5
+      - name: Linting
+        run: npm lint
+      - name: Run tests
+        run: npm test
+      - name: Deploy app
+        run: npm run build  
