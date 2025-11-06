@@ -1,0 +1,8 @@
+name: Second workflow excercise
+on: push
+jobs: 
+  output-event-details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print object
+        run: echo "${{toJson(github)}}"
