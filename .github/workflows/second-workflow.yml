@@ -1,5 +1,7 @@
 name: Second workflow excercise
-on: push
+on:
+  issues: 
+    types: [opened]
 jobs: 
   output-event-details:
     runs-on: ubuntu-latest
